@@ -1,0 +1,16 @@
+# Ignore everything
+*
+
+# ...except this file
+!.gitignore
+
+# Also don't ignore directories
+!*/
+
+# Don't ignore core directories
+!kitty/*
+!nvim/*
+!tmux/*
+
+### Normal .gitignore stuff starts here ###
+tmux/plugins/
