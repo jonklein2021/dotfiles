@@ -10,6 +10,9 @@
 # Don't ignore core directories
 !kitty/*
 !nvim/*
+!nvim/lsp/*
+!nvim/lua/config/*
+!nvim/lua/plugins/*
 !tmux/*
 
 ### Normal .gitignore stuff starts here ###
