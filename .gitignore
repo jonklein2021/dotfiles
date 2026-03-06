@@ -1,8 +1,9 @@
 # Ignore everything
 *
 
-# ...except this file
+# ...except these files
 !.gitignore
+!README.md
 
 # Also don't ignore directories
 !*/
