@@ -4,6 +4,7 @@
 # ...except these files
 !.gitignore
 !README.md
+!.vimrc
 
 # Also don't ignore directories
 !*/
