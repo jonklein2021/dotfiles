@@ -1,21 +1,5 @@
-# Ignore everything
-*
-
-# ...except these files
-!.gitignore
-!README.md
-!.vimrc
-
-# Also don't ignore directories
-!*/
-
-# Don't ignore core directories
-!kitty/*
-!nvim/*
-!nvim/lsp/*
-!nvim/lua/config/*
-!nvim/lua/plugins/*
-!tmux/*
-
-### Normal .gitignore stuff starts here ###
 tmux/plugins/
+
+cutechess/
+pulse
+QtProject.conf

@@ -1,0 +1,21 @@
+alias ".."="cd .."
+alias cls="clear"
+alias nv="nvim"
+
+# Git
+alias ga="git add"
+alias gb="git branch"
+alias gca="git commit --amend"
+alias gcane="git commit --amend --no-edit"
+alias gcm="git commit -m"
+alias gco="git checkout"
+alias gd="git diff"
+alias gl="git log"
+alias gs="git status"
+alias gp="git push"
+
+alias mc='meson compile'
+alias ms='meson setup'
+alias msb='meson setup build'
+alias msbr='meson setup build --reconfigure'
+
