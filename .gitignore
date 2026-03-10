@@ -1,5 +1,12 @@
 tmux/plugins/
 
+# WSL
 cutechess/
 pulse
 QtProject.conf
+
+# Mac
+NuGet/
+cagent/
+.mono/
+.zshrc.osx.work

@@ -10,16 +10,17 @@ set -e
 DOTFILES_DIR="${HOME}/.config"
 
 declare -a SHARED_FILES=(
-    ".gitconfig"
     ".vimrc"
     ".zsh_aliases"
     ".zshrc"
+    ".zshrc.osx"
+    ".zshrc.wsl"
 )
 
 for file in "${SHARED_FILES[@]}"
 do
     if [[ -f "${DOTFILES_DIR}/${file}" ]]; then
-        cp -v "${DOTFILES_DIR}/${file}" "${HOME}/${file}"
+        cp -v "${DOTFILES_DIR}/${file}" $HOME
     else
         echo "Warning: ${file} not found, skipping."
     fi

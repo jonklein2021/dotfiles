@@ -1,0 +1,17 @@
+# Path
+export PATH="$PATH:/opt/homebrew/opt/node@22/bin"
+
+# Other Env Variables
+export KITTY_CONFIG_DIRECTORY="$HOME/.config/kitty/kitty.conf"
+export MONO_GAC_PREFIX="/opt/homebrew"
+
+# NVM Block
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Pull in work-specific script
+if [ -f $HOME/.zshrc.osx.work ]; then
+  . $HOME/.zshrc.osx.work
+fi
+
