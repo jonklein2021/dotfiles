@@ -10,6 +10,9 @@ return {
             panel = {
                 enabled = true,
             },
+            server = {
+                type = "binary",
+            },
         })
     end
 }
