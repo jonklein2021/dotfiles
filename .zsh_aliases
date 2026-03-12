@@ -3,6 +3,7 @@ alias "..."="cd ../.."
 alias "...."="cd ../../.."
 alias "....."="cd ../../../.."
 
+alias _="sudo "
 alias cls="clear"
 alias nv="nvim"
 alias v="vim"
@@ -23,6 +24,8 @@ alias glo='git log --pretty=format:"%C(yellow)%h %Cblue%ad %Cgreen%an %Creset%s"
 alias glg='git log --graph'
 alias gm='git merge'
 alias gp='git push'
+alias gpl='git pull'
+alias gplr='git pull --rebase'
 alias gpo='git push origin HEAD'
 alias grb='git rebase'
 alias grh='git reset'
@@ -30,7 +33,14 @@ alias grm='git remote'
 alias grs='git restore'
 alias gs='git status'
 alias gsh='git show'
+alias gst='git stash'
 alias gsw='git switch'
+
+# Tmux
+alias tm='tmux'
+alias tmat='tmux attach -t'
+alias tmns='tmux new -s'
+alias tmkt='tmux kill-session -t'
 
 # Meson
 alias mc='meson compile'
@@ -41,3 +51,19 @@ alias msbr='meson setup build --reconfigure'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# System Monitoring
+alias htop='htop'
+alias dush='du -sh *'
+alias meminfo="free -h"
+
+# Networking
+alias myip="curl ifconfig.me"
+alias ports="netstat -tulanp | grep LISTEN"
+alias pingg="ping google.com"
+
+# Daily Utilities
+alias mkd='mkdir -p'
+alias ..ln='ln -s'
+alias cpr='cp -r'
+alias clup='sudo apt update && sudo apt upgrade -y'
