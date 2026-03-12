@@ -1,5 +1,3 @@
-tmux/plugins/
-
 # WSL
 cutechess/
 pulse
@@ -7,8 +5,11 @@ QtProject.conf
 
 # Mac
 NuGet/
-avante.nvim/
 cagent/
-github-copilot/
 .mono/
 .zshrc.osx.work
+avante.nvim/
+
+# Shared
+github-copilot/
+tmux/plugins/

@@ -21,7 +21,7 @@ zstyle ':omz:update' mode reminder # Remind me to update OMZ when it's time
 DISABLE_UNTRACKED_FILES_DIRTY="true" # Disable marking untracked files under VCS as dirty
 
 # Plugins
-plugins=(kitty last-working-dir vi-mode)
+plugins=(git kitty last-working-dir)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,6 +44,9 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
+
+# Deno Config
+. "$HOME/.deno/env"
 
 ### Aliases
 
