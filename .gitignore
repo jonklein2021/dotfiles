@@ -7,6 +7,8 @@ QtProject.conf
 
 # Mac
 NuGet/
+avante.nvim/
 cagent/
+github-copilot/
 .mono/
 .zshrc.osx.work

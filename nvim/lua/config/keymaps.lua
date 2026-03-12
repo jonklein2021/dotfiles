@@ -71,3 +71,8 @@ vim.keymap.set({ "n", "v" }, "gs", "<Cmd>Neotree float git_status<CR>", {})
 vim.keymap.set({ "i", "n", "v" }, "<C-f>", "<Cmd>Telescope find_files<CR>", { desc = "Searches for files" })
 vim.keymap.set({ "i", "n", "v" }, "<C-_>", require("telescope.builtin").live_grep, { desc = "Live Grep" })
 vim.keymap.set({ "n", "v" }, "<Leader>p", require("peek").open, { desc = "Markdown preview" })
+
+-- AI Slop Keybinds
+vim.keymap.set({ "n", "v" }, "<Leader><Space>", "<Cmd>AvanteToggle<CR>", { desc = "Open Avante chat window" })
+vim.keymap.set({ "n", "v" }, "<Leader>d", "<Cmd>AvanteClear<CR>", { desc = "Clear chat history" })
+vim.keymap.set({ "i", "n", "v" }, "<C-c>", "<Cmd>AvanteStop<CR>", { desc = "Stop current request" })
