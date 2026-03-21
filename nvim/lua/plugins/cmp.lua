@@ -5,6 +5,7 @@ return {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-cmdline",
+        "brenoprata10/nvim-highlight-colors"
     },
     event = "InsertEnter",
     config = function()
@@ -23,6 +24,9 @@ return {
                 { name = "buffer" },
                 { name = "path" },
             }),
+            formatting = {
+                format = require("nvim-highlight-colors").format
+            }
         })
     end
 }

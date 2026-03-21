@@ -57,5 +57,6 @@ vim.lsp.enable({
 	'omnisharp',
 	'pyright',
 	'vscode-json-language-server',
+	'vscode-css-language-server',
 	'vtsls'
 })
