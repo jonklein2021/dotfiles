@@ -8,6 +8,4 @@ return {
             checkUpdates = true,
         },
     },
-
 }
-

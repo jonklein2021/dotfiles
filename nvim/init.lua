@@ -53,6 +53,7 @@ require("config.keymaps")
 vim.lsp.enable({
 	'bash-language-server',
 	'clangd',
+	'emmet-language-server',
 	'lua-language-server',
 	'omnisharp',
 	'pyright',
