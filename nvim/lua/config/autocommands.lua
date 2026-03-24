@@ -22,7 +22,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Set up 2-space exceptions for certain filetypes
 vim.api.nvim_create_autocmd("FileType", {
     group = spacing,
-    pattern = { "html", "css", "yaml", "json", "javascript", "javascriptreact", "typescript" },
+    pattern = { "html", "css", "yaml", "json", "javascript", "javascriptreact", "typescript", "typescriptreact" },
     callback = function()
         vim.opt_local.expandtab = true
         vim.opt_local.tabstop = 2
@@ -69,22 +69,18 @@ local rename_variable = function()
     vim.lsp.buf.rename(new_name)
 end
 
+local common_opts = { noremap = true, silent = true, buffer = true };
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("my.lsp", {}),
     callback = function(args)
         -- Keymaps
-        vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { noremap = true, silent = true, buffer = true })
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true, buffer = true })
-        vim.keymap.set(
-            "n",
-            "gi",
-            vim.lsp.buf.implementation,
-            { noremap = true, silent = true, buffer = true }
-        )
-        vim.keymap.set("n", "gr", vim.lsp.buf.references, { noremap = true, silent = true, buffer = true })
-        vim.keymap.set("n", "<Leader>D", vim.lsp.buf.type_definition, { noremap = true, buffer = true })
-        vim.keymap.set("n", "<Leader>r", rename_variable, { noremap = true, buffer = true })
-        vim.keymap.set("n", "<Leader>c", vim.lsp.buf.code_action, { noremap = true, buffer = true })
+        vim.keymap.set("n", "gD", vim.lsp.buf.declaration, common_opts)
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, common_opts)
+        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, common_opts)
+        vim.keymap.set("n", "gr", vim.lsp.buf.references, common_opts)
+        vim.keymap.set("n", "<Leader>D", vim.lsp.buf.type_definition, common_opts)
+        vim.keymap.set("n", "<Leader>r", rename_variable, common_opts)
+        vim.keymap.set("n", "<Leader>c", vim.lsp.buf.code_action, common_opts)
 
         local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
