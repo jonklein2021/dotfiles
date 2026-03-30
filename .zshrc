@@ -57,6 +57,7 @@ fi
 ### Path ###
 
 export PATH="$PATH:$HOME/.local/share/nvim/mason/bin"
+export PATH="$PATH:/opt/nvim/bin"
 
 ### OS Specific Config ###
 

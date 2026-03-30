@@ -26,3 +26,5 @@ do
     fi
 done
 
+zsh -l
+

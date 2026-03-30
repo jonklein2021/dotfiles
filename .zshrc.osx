@@ -1,6 +1,5 @@
 # Path
 export PATH="$PATH:/opt/homebrew/opt/node@22/bin"
-export PATH="$PATH:/opt/nvim/bin"
 export PATH="$PATH:${HOME}/.dotnet/tools"
 
 # Other Env Variables
