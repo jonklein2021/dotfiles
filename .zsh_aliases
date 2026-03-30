@@ -7,8 +7,10 @@ alias _="sudo "
 alias cls="clear"
 alias nv="nvim"
 alias v="vim"
+alias y="yazi"
 
 # Git
+alias g='git'
 alias ga='git add'
 alias gb='git branch'
 alias gbdm='git branch --merged | grep -v '^\*' | xargs -n 1 git branch -d' # deletes merged branches

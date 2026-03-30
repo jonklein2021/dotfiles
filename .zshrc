@@ -21,7 +21,7 @@ zstyle ':omz:update' mode reminder # Remind me to update OMZ when it's time
 DISABLE_UNTRACKED_FILES_DIRTY="true" # Disable marking untracked files under VCS as dirty
 
 # Plugins
-plugins=(git kitty last-working-dir)
+plugins=(kitty last-working-dir)
 
 source $ZSH/oh-my-zsh.sh
 
