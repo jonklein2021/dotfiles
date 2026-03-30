@@ -1,0 +1,10 @@
+[mgr]
+prepend_keymap = [
+    { on = "<C-j>", run = "arrow 10", desc = "hella down" },
+    { on = "<C-k>", run = "arrow -10", desc = "hella up" },
+    { on = "<C-b>", run = "noop", desc = "conflicts w tmux" },
+    { on = "<C-f>", run = "search --via=fd", desc = "find files using fd" },
+    { on = "<C-_>", run = "search --via=rg", desc = "grep for text using ripgrep" },
+    { on = "s", run = "noop", desc = "free up old keymap for fd search" },
+    { on = "S", run = "noop", desc = "free up old keymap for rg search" },
+]
