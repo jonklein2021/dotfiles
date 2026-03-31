@@ -98,7 +98,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
         -- Refreshes code lenses
         if client:supports_method("textDocument/codeLens") then
-            vim.lsp.codelens.refresh()
+            vim.lsp.codelens.enable(true)
             local refreshCodelens = vim.api.nvim_create_augroup("refreshCodelens", {})
             vim.api.nvim_create_autocmd({
                 "LspAttach",
