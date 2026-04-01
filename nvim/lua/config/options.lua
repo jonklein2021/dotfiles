@@ -5,7 +5,8 @@ vim.opt.ignorecase = true    -- ignore case in find commands
 vim.opt.smartcase = true     -- ^ except when argument contains a capital letter
 vim.opt.timeoutlen = 200     -- force mash of jk/kj to enter normal mode
 vim.opt.wrap = false         -- I like my lines to stay in their lanes :)
-vim.wo.number = true         -- show line numbers
+vim.opt.number = true        -- show line numbers
+vim.opt.relativenumber = true
 vim.opt.termguicolors = true -- necessary for color code previews
 
 -- configure clipboard provider

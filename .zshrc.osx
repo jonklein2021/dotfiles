@@ -3,7 +3,7 @@ export PATH="$PATH:/opt/homebrew/opt/node@22/bin"
 export PATH="$PATH:${HOME}/.dotnet/tools"
 
 # Other Env Variables
-export KITTY_CONFIG_DIRECTORY="$HOME/.config/kitty/kitty.conf"
+export KITTY_CONFIG_DIRECTORY="$HOME/.config/kitty/"
 export MONO_GAC_PREFIX="/opt/homebrew"
 
 # NVM Block
