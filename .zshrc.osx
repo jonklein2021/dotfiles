@@ -1,9 +1,11 @@
 # Path
 export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
 export PATH="${HOME}/.dotnet/tools:$PATH"
+
 # Other Env Variables
-export KITTY_CONFIG_DIRECTORY="$HOME/.config/kitty/"
+export KITTY_CONFIG_DIRECTORY="$HOME/.config/kitty"
 export MONO_GAC_PREFIX="/opt/homebrew"
+export TMUX_PLUGIN_MANAGER_PATH="$HOME/.config/tmux/plugins/tpm"
 
 # NVM Block
 export NVM_DIR="$HOME/.nvm"
