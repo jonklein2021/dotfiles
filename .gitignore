@@ -9,7 +9,11 @@ cagent/
 .mono/
 .zshrc.osx.work
 avante.nvim/
-
+spotatui/client.yml
+spotatui/spotatui_panic.log
+spotatui/*.json
+spotatui/streaming_cache/credentials.json
+            
 # Shared
 github-copilot/
 tmux/plugins/
