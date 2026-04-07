@@ -1,23 +1,23 @@
 return {
-    "mikavilpas/yazi.nvim",
-    version = "*", -- use the latest stable version
-    event = "VeryLazy",
+    'mikavilpas/yazi.nvim',
+    version = '*', -- use the latest stable version
+    event = 'VeryLazy',
     dependencies = {
-        { "nvim-lua/plenary.nvim", lazy = true },
+        { 'nvim-lua/plenary.nvim', lazy = true },
     },
     keys = {
         {
-            "<C-n>",
-            mode = { "n", "v" },
-            "<Cmd>Yazi<cr>",
-            desc = "Open yazi at the current file",
+            '<C-n>',
+            mode = { 'n', 'v' },
+            '<Cmd>Yazi<cr>',
+            desc = 'Open yazi at the current file',
         },
     },
     opts = {
         -- open directories in yazi instead of netrw
         open_for_directories = true,
         keymaps = {
-            show_help = "<F1>",
+            show_help = '<F1>',
         },
     },
     init = function()

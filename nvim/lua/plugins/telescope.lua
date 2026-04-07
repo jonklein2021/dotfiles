@@ -5,16 +5,16 @@ return {
         'nvim-lua/plenary.nvim',
         {
             'nvim-telescope/telescope-fzf-native.nvim',
-            build = 'make'
+            build = 'make',
         },
     },
     config = function()
         require('telescope').setup({
             defaults = {
                 file_ignore_patterns = {
-                    "node_modules"
-                }
-            }
+                    'node_modules',
+                },
+            },
         })
-    end
+    end,
 }

@@ -1,0 +1,7 @@
+block_newline_gaps = "Preserve"
+column_width = 128
+indent_type = "Spaces"
+indent_width = 4
+quote_style = "AutoPreferSingle"
+[sort_requires]
+enabled = true

@@ -1,32 +1,32 @@
 return {
-    "hrsh7th/nvim-cmp",
+    'hrsh7th/nvim-cmp',
     dependencies = {
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path",
-        "hrsh7th/cmp-cmdline",
-        "brenoprata10/nvim-highlight-colors"
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-path',
+        'hrsh7th/cmp-cmdline',
+        'brenoprata10/nvim-highlight-colors',
     },
-    event = "InsertEnter",
+    event = 'InsertEnter',
     config = function()
-        local cmp = require("cmp");
+        local cmp = require('cmp')
         cmp.setup({
             mapping = cmp.mapping.preset.insert({
-                ["<Tab>"] = cmp.mapping.select_next_item(),
-                ["<S-Tab>"] = cmp.mapping.select_prev_item(),
-                ["<Down>"] = cmp.mapping.select_next_item(),
-                ["<Up>"] = cmp.mapping.select_prev_item(),
-                ["<CR>"] = cmp.mapping.confirm({ select = true }),
-                ["<C-Space>"] = cmp.mapping.complete(),
+                ['<Tab>'] = cmp.mapping.select_next_item(),
+                ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+                ['<Down>'] = cmp.mapping.select_next_item(),
+                ['<Up>'] = cmp.mapping.select_prev_item(),
+                ['<CR>'] = cmp.mapping.confirm({ select = true }),
+                ['<C-Space>'] = cmp.mapping.complete(),
             }),
             sources = cmp.config.sources({
-                { name = "nvim_lsp" },
-                { name = "buffer" },
-                { name = "path" },
+                { name = 'nvim_lsp' },
+                { name = 'buffer' },
+                { name = 'path' },
             }),
             formatting = {
-                format = require("nvim-highlight-colors").format
-            }
+                format = require('nvim-highlight-colors').format,
+            },
         })
-    end
+    end,
 }
