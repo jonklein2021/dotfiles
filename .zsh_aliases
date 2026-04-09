@@ -3,12 +3,6 @@ alias "..."="cd ../.."
 alias "...."="cd ../../.."
 alias "....."="cd ../../../.."
 
-alias _="sudo "
-alias cls="clear"
-alias nv="nvim"
-alias v="vim"
-alias y="yazi"
-
 # Git
 alias g='git'
 alias ga='git add'
@@ -17,6 +11,7 @@ alias gbdm='git branch --merged | grep -v '^\*' | xargs -n 1 git branch -d' # de
 alias gca='git commit --amend --date=now'
 alias gcane='git commit --amend --no-edit --date=now'
 alias gcfg='git config'
+alias gcl='git clone'
 alias gcm='git commit -m'
 alias gco='git checkout'
 alias gd='git diff'
@@ -68,7 +63,15 @@ alias ports="netstat -tulanp | grep LISTEN"
 alias pingg="ping google.com"
 
 # Daily Utilities
+alias _="sudo "
 alias mkd='mkdir -p'
 alias ..ln='ln -s'
 alias cpr='cp -r'
 alias clup='sudo apt update && sudo apt upgrade -y'
+alias cls="clear"
+
+# Other Programs
+alias nv="nvim"
+alias v="vim"
+alias y="yazi"
+

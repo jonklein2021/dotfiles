@@ -14,6 +14,16 @@ return {
                 file_ignore_patterns = {
                     'node_modules',
                 },
+                mappings = {
+                    n = {
+                        ['q'] = require('telescope.actions').close,
+                    },
+                },
+            },
+            mappings = {
+                n = {
+                    ['q'] = require('telescope.actions').delete_buffer,
+                },
             },
         })
     end,

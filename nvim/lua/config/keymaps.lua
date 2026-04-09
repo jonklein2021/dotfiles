@@ -67,8 +67,11 @@ end, { desc = 'Jump to previous diagnostic in this file' })
 vim.keymap.set({ 'n', 'v' }, '<C-l>', function()
     vim.diagnostic.jump({ count = 1, float = true })
 end, { desc = 'Jump to next diagnostic in this file' })
-vim.keymap.set({ 'i', 'n', 'v' }, '<C-f>', '<Cmd>Telescope find_files<CR>', { desc = 'Searches for files' })
-vim.keymap.set({ 'i', 'n', 'v' }, '<C-_>', require('telescope.builtin').live_grep, { desc = 'Live Grep' })
+vim.keymap.set({ 'i', 'n', 'v' }, '<C-f>', '<Cmd>Telescope find_files<CR>', { desc = 'File Search' })
+vim.keymap.set({ 'n', 'v' }, 'gs', function()
+    require('telescope.builtin').git_status({ use_file_path = true })
+end, { desc = 'Git Status' })
+vim.keymap.set({ 'i', 'n', 'v' }, '<C-_>', '<Cmd>Telescope live_grep<CR>', { desc = 'Live Grep' })
 vim.keymap.set({ 'n', 'v' }, '<Leader>p', require('peek').open, { desc = 'Markdown preview' })
 
 -- AI Slop Keybinds
