@@ -392,7 +392,7 @@ tmux_conf_urlscan_options="--compact --dedupe"
 #set -g history-limit 10000
 
 # start with mouse mode enabled
-#set -g mouse on
+set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -407,7 +407,7 @@ unbind C-a
 # bind C-a send-prefix
 
 # if you don't want Oh my tmux! to alter a binding or a setting, use #!important
-# bind c new-window -c '#{pane_current_path}' #!important
+bind c new-window -c '#{pane_current_path}' #!important
 
 # display a message after toggling mouse support
 bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?#{mouse},on,off}'
@@ -416,7 +416,13 @@ bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?
 #set -g status-position top
 
 # because MacOS
-# set-environment -g PATH "/usr/local/bin:/bin:/usr/bin"
+set-environment -g PATH "/usr/local/bin:/bin:/usr/bin:/opt/homebrew/bin:/opt/nvim/bin"
+
+# <Prefix + n>: new session popup
+bind n display-popup -E 'bash -i -c "read -p \"Session name: \" name; tmux new-session -d -s \$name && tmux switch-client -t \$name"'
+
+# <Prefix + k>: fuzzy-find through keymaps
+bind k display-popup -E 'tmux list-keys | fzf'
 
 # needed for Yazi's image preview to work properly
 # ref: https://yazi-rs.github.io/docs/image-preview#tmux
@@ -468,7 +474,7 @@ tmux_conf_uninstall_plugins_on_reload=true
 
 # -- plugins (not tpm) ---------------------------------------------------------
 
-run '~/.config/tmux/plugins/tmux-mighty-scroll/mighty-scroll.tmux'
+# run '~/.config/tmux/plugins/tmux-mighty-scroll/mighty-scroll.tmux'
 
 # -- custom variables ----------------------------------------------------------
 
