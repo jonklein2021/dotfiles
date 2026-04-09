@@ -61,18 +61,13 @@ vim.keymap.set('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', {})
 vim.keymap.set('n', '<A-0>', '<Cmd>BufferLast<CR>', {})
 
 -- Bells & Whistles
-vim.keymap.set({ 'n', 'v' }, '<C-p>', function()
-    vim.diagnostic.jump({ count = -1, float = true })
-end, { desc = 'Jump to previous diagnostic in this file' })
-vim.keymap.set({ 'n', 'v' }, '<C-l>', function()
-    vim.diagnostic.jump({ count = 1, float = true })
-end, { desc = 'Jump to next diagnostic in this file' })
 vim.keymap.set({ 'i', 'n', 'v' }, '<C-f>', '<Cmd>Telescope find_files<CR>', { desc = 'File Search' })
 vim.keymap.set({ 'n', 'v' }, 'gs', function()
     require('telescope.builtin').git_status({ use_file_path = true })
 end, { desc = 'Git Status' })
 vim.keymap.set({ 'i', 'n', 'v' }, '<C-_>', '<Cmd>Telescope live_grep<CR>', { desc = 'Live Grep' })
 vim.keymap.set({ 'n', 'v' }, '<Leader>p', require('peek').open, { desc = 'Markdown preview' })
+vim.keymap.set({ 'n', 'v' }, '<Leader>gb', ':GBrowse<CR>', { desc = 'Open in GitHub/GitLab' })
 
 -- AI Slop Keybinds
 vim.keymap.set({ 'n', 'v' }, '<Leader><Space>', '<Cmd>AvanteToggle<CR>', { desc = 'Open Avante chat window' })
