@@ -14,6 +14,7 @@ declare -a SHARED_FILES=(
     ".zsh_aliases"
     ".zshrc"
     ".zshrc.osx"
+    ".zshrc.osx.work"
     ".zshrc.wsl"
 )
 
