@@ -1,13 +1,13 @@
-vim.opt.expandtab = false -- transform tabs to spaces
-vim.opt.tabstop = 4 -- # spaces for tabs
-vim.opt.shiftwidth = 4 -- # spaces for indents
-vim.opt.ignorecase = true -- ignore case in find commands
-vim.opt.smartcase = true -- ^ except when argument contains a capital letter
-vim.opt.timeoutlen = 200 -- force mash of jk/kj to enter normal mode
-vim.opt.wrap = false -- I like my lines to stay in their lanes :)
-vim.opt.number = true -- show line numbers
-vim.opt.relativenumber = true
-vim.opt.termguicolors = true -- necessary for color code previews
+-- vim.opt.tabstop = 4           -- # tab size
+-- vim.opt.shiftwidth = 4        -- # indent size
+vim.opt.expandtab = false     -- transform tabs to spaces
+vim.opt.ignorecase = true     -- ignore case in find commands
+vim.opt.smartcase = true      -- ^ except when argument contains a capital letter
+vim.opt.timeoutlen = 200      -- force mash of jk/kj to enter normal mode
+vim.opt.wrap = false          -- I like my lines to stay in their lanes :)
+vim.opt.number = true         -- show line numbers
+vim.opt.relativenumber = true -- easier [n]k/j movements
+vim.opt.termguicolors = true  -- necessary for color code previews
 
 -- configure clipboard provider
 vim.opt.clipboard = 'unnamedplus'
