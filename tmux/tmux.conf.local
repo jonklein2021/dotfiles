@@ -422,7 +422,7 @@ set-environment -g PATH "/usr/local/bin:/bin:/usr/bin:/opt/homebrew/bin:/opt/nvi
 bind n display-popup -E 'bash -i -c "read -p \"Session name: \" name; tmux new-session -d -s \$name && tmux switch-client -t \$name"'
 
 # <Prefix + k>: fuzzy-find through keymaps
-bind k display-popup -E 'tmux list-keys | fzf'
+# bind k display-popup -E 'tmux list-keys | fzf'
 
 # needed for Yazi's image preview to work properly
 # ref: https://yazi-rs.github.io/docs/image-preview#tmux

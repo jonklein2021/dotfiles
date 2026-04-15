@@ -63,18 +63,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end
 
         -- Refreshes code lenses
-        if client:supports_method('textDocument/codeLens') then
-            vim.lsp.codelens.enable(true)
-            local refreshCodelens = vim.api.nvim_create_augroup('refreshCodelens', {})
-            vim.api.nvim_create_autocmd({
-                'LspAttach',
-                'InsertLeave',
-                'TextChanged',
-            }, {
-                buffer = 0,
-                callback = vim.lsp.codelens.refresh,
-                group = refreshCodelens,
-            })
-        end
+        -- if client:supports_method('textDocument/codeLens') then
+        --     vim.lsp.codelens.enable(true)
+        --     local refreshCodelens = vim.api.nvim_create_augroup('refreshCodelens', {})
+        --     vim.api.nvim_create_autocmd({
+        --         'LspAttach',
+        --         'InsertLeave',
+        --         'TextChanged',
+        --     }, {
+        --         buffer = 0,
+        --         callback = vim.lsp.codelens.refresh,
+        --         group = refreshCodelens,
+        --     })
+        -- end
     end,
 })

@@ -61,6 +61,12 @@ vim.keymap.set('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', {})
 vim.keymap.set('n', '<A-0>', '<Cmd>BufferLast<CR>', {})
 
 -- Bells & Whistles
+vim.keymap.set({ 'n', 'v' }, '[d', function()
+    vim.diagnostic.jump({ count = -1, float = true })
+end, { desc = 'Jump to previous diagnostic in this file' })
+vim.keymap.set({ 'n', 'v' }, ']d', function()
+    vim.diagnostic.jump({ count = 1, float = true })
+end, { desc = 'Jump to next diagnostic in this file' })
 vim.keymap.set({ 'i', 'n', 'v' }, '<C-f>', '<Cmd>Telescope find_files<CR>', { desc = 'File Search' })
 vim.keymap.set({ 'n', 'v' }, 'gs', function()
     require('telescope.builtin').git_status({ use_file_path = true })
