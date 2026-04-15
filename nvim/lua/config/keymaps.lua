@@ -23,20 +23,6 @@ vim.keymap.set({ 'n', 'v' }, '<C-r>', '<C-l>', { desc = 'Ctrl+r "refreshes"' })
 vim.keymap.set({ 'i', 'n', 'v' }, '<C-b>', '<nop>', { desc = "If I can't have Ctrl+f I can't have Ctrl+b" })
 vim.keymap.set({ 'i', 'n', 'v' }, '<C-a>', '<Esc>gg^vG$', { desc = 'Ctrl+a selects all' })
 
--- Enclose selection with characters
-local function surround(left, right)
-    right = right or left
-    return string.format('c%s<C-r>"%s<Esc>', left, right)
-end
-
-vim.keymap.set('v', 's"', surround('"'))
-vim.keymap.set('v', "s'", surround("'"))
-vim.keymap.set('v', 's`', surround('`'))
-vim.keymap.set('v', 's(', surround('(', ')'))
-vim.keymap.set('v', 's{', surround('{', '}'))
-vim.keymap.set('v', 's[', surround('[', ']'))
-vim.keymap.set('v', 's<', surround('<', '>'))
-
 -- keymaps for moving lines up and down
 vim.keymap.set('n', '<A-j>', '<Esc>:m .+1<CR>==', {})
 vim.keymap.set('n', '<A-k>', '<Esc>:m .-2<CR>==', {})
