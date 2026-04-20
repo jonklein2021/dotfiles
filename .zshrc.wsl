@@ -1,6 +1,9 @@
 # Path
 export PATH="/opt/yazi/target/release:$PATH"
 
+# Useful to match `open` command on MacOS
+alias open='xdg-open'
+
 # NVM Block
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

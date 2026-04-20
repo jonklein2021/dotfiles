@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd('BufReadPost', {
         '*.png',
     },
     callback = function()
-        vim.fn.jobstart('xdg-open "' .. vim.fn.expand('%') .. '"', {
+        vim.fn.jobstart('open "' .. vim.fn.expand('%') .. '"', {
             detach = true,
         })
         vim.api.nvim_buf_delete(0, {})
@@ -61,20 +61,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
                 vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = 0 }), { bufnr = 0 })
             end, { buffer = true })
         end
-
-        -- Refreshes code lenses
-        -- if client:supports_method('textDocument/codeLens') then
-        --     vim.lsp.codelens.enable(true)
-        --     local refreshCodelens = vim.api.nvim_create_augroup('refreshCodelens', {})
-        --     vim.api.nvim_create_autocmd({
-        --         'LspAttach',
-        --         'InsertLeave',
-        --         'TextChanged',
-        --     }, {
-        --         buffer = 0,
-        --         callback = vim.lsp.codelens.refresh,
-        --         group = refreshCodelens,
-        --     })
-        -- end
     end,
 })
