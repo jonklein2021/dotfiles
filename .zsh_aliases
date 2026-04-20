@@ -41,6 +41,7 @@ alias tmat='tmux attach -t'
 alias tmns='tmux new -s'
 alias tmls='tmux ls'
 alias tmkt='tmux kill-session -t'
+alias tmks='tmux kill-server'
 
 # Meson
 alias mc='meson compile'
