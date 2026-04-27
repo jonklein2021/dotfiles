@@ -17,7 +17,7 @@ keybindings:
   previous_track: p
   force_previous_track: P
   help: '?'
-  shuffle: ctrl-s
+  shuffle: S
   repeat: ctrl-r
   search: /
   submit: enter
@@ -46,7 +46,7 @@ behavior:
   announcement_feed_url: null
   seen_announcement_ids:
   - 2026-02-27-major-refactor-complete
-  shuffle_enabled: true
+  shuffle_enabled: false
   liked_icon: ♥
   shuffle_icon: 🔀
   repeat_track_icon: 🔂
