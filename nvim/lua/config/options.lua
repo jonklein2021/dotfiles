@@ -1,5 +1,3 @@
--- vim.opt.tabstop = 4           -- # tab size
--- vim.opt.shiftwidth = 4        -- # indent size
 vim.opt.expandtab = false     -- transform tabs to spaces
 vim.opt.ignorecase = true     -- ignore case in find commands
 vim.opt.smartcase = true      -- ^ except when argument contains a capital letter

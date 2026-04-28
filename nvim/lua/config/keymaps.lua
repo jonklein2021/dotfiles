@@ -47,6 +47,7 @@ vim.keymap.set('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', {})
 vim.keymap.set('n', '<A-0>', '<Cmd>BufferLast<CR>', {})
 
 -- Bells & Whistles
+vim.keymap.set('n', '<Leader>m', '<Cmd>%s/\r//g<CR>', { desc = 'Deletes all Microsoft carriage returns' })
 vim.keymap.set({ 'n', 'v' }, '[d', function()
     vim.diagnostic.jump({ count = -1, float = true })
 end, { desc = 'Jump to previous diagnostic in this file' })
