@@ -1,8 +1,12 @@
 # Path
 export PATH="/opt/yazi/target/release:$PATH"
+export PATH="/mnt/c/Windows/System32:$PATH"
+export PATH="/mnt/c/Windows/System32/WindowsPowerShell/v1.0:$PATH"
 
-# Useful to match `open` command on MacOS
+# Useful for matching OSX commands
 alias open='xdg-open'
+alias pbcopy='powershell.exe -command "Set-Clipboard"'
+alias pbpaste='powershell.exe -command "Get-Clipboard" | sed "s/\r$//"'
 
 # NVM Block
 export NVM_DIR="$HOME/.nvm"
