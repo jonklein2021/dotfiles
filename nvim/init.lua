@@ -56,7 +56,7 @@ vim.lsp.enable({
     'emmet-language-server',
     'lua-language-server',
     'omnisharp',
-    'pyright',
+    'basedpyright',
     'vscode-json-language-server',
     'vscode-css-language-server',
     'vtsls',

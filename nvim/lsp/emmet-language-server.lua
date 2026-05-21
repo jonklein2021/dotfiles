@@ -12,7 +12,6 @@ return {
         'sass',
         'scss',
         'css',
-        'pug',
     },
     single_file_support = true,
 }
