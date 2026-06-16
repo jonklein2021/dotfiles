@@ -51,6 +51,7 @@ require('config.keymaps')
 
 -- Enable language servers
 vim.lsp.enable({
+    'angular-language-service',
     'bash-language-server',
     'clangd',
     'emmet-language-server',
