@@ -1,5 +1,6 @@
 # Path
 export PATH="/opt/yazi/target/release:$PATH"
+export PATH="/snap/bin:$PATH"
 export PATH="/mnt/c/Windows/System32:$PATH"
 export PATH="/mnt/c/Windows/System32/WindowsPowerShell/v1.0:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
