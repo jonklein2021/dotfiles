@@ -1,6 +1,8 @@
 # WSL
 cutechess/
-pulse
+pulse/
+gcloud/
+.wrangler/
 QtProject.conf
 
 # Mac
@@ -17,3 +19,4 @@ spotatui/streaming_cache/credentials.json
 # Shared
 github-copilot/
 tmux/plugins/
+uv/
