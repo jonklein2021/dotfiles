@@ -8,7 +8,7 @@ return {
                 checkThirdParty = false,
             },
             diagnostics = {
-                globals = { 'before_each', 'describe', 'it', 'require', 'vim' },
+                globals = { 'before_each', 'describe', 'it', 'MiniSnippets', 'require', 'vim' },
             },
             hint = {
                 enable = true,
