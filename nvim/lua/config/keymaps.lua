@@ -61,8 +61,3 @@ end, { desc = 'Git Status' })
 vim.keymap.set({ 'i', 'n', 'v' }, '<C-_>', '<Cmd>Telescope live_grep<CR>', { desc = 'Live Grep' })
 vim.keymap.set({ 'n', 'v' }, '<Leader>p', require('peek').open, { desc = 'Markdown preview' })
 vim.keymap.set({ 'n', 'v' }, '<Leader>gb', ':GBrowse<CR>', { desc = 'Open in GitHub/GitLab' })
-
--- AI Slop Keybinds
-vim.keymap.set({ 'n', 'v' }, '<Leader><Space>', '<Cmd>AvanteToggle<CR>', { desc = 'Open Avante chat window' })
-vim.keymap.set({ 'n', 'v' }, '<Leader>d', '<Cmd>AvanteClear<CR>', { desc = 'Clear chat history' })
-vim.keymap.set({ 'i', 'n', 'v' }, '<C-c>', '<Cmd>AvanteStop<CR>', { desc = 'Stop current request' })
