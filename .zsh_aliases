@@ -63,7 +63,7 @@ alias myip="curl ifconfig.me"
 alias ports="netstat -tulanp | grep LISTEN"
 alias pingg="ping google.com"
 
-# Daily Utilities
+# Utilities
 alias _="sudo "
 alias mkd='mkdir -p'
 alias ..ln='ln -s'
@@ -75,4 +75,6 @@ alias cls="clear"
 alias nv="nvim"
 alias v="vim"
 alias y="yazi"
+alias oc="opencode"
+alias cl="claude"
 
