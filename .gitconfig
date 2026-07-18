@@ -1,0 +1,16 @@
+[user]
+    name = Jon Klein
+	email = jonklein2021@gmail.com
+[core]
+	editor = vim
+[pager]
+	branch = false
+[pull]
+	rebase = true
+
+# Conditional overrides
+[includeIf "gitdir:~/Code/personal/"]
+    path = ~/.gitconfig-personal
+
+[includeIf "gitdir:~/Code/work/"]
+    path = ~/.gitconfig-work

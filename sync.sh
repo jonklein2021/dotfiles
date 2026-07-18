@@ -10,6 +10,9 @@ set -e
 DOTFILES_DIR="${HOME}/.config"
 
 declare -a SHARED_FILES=(
+    ".gitconfig"
+    ".gitconfig-personal"
+    ".gitconfig-work"
     ".vimrc"
     ".zsh_aliases"
     ".zshrc"

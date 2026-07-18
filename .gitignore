@@ -9,13 +9,15 @@ QtProject.conf
 NuGet/
 cagent/
 .mono/
+.gitconfig-personal
+.gitconfig-work
 .zshrc.osx.work
 avante.nvim/
 spotatui/client.yml
 spotatui/spotatui_panic.log
 spotatui/*.json
 spotatui/streaming_cache/credentials.json
-            
+
 # Shared
 github-copilot/
 tmux/plugins/
