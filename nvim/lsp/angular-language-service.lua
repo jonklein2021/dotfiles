@@ -8,5 +8,5 @@ return {
         '/opt/homebrew/lib/node_modules',
     },
     root_markers = { { 'angular.json', '.angular' }, 'package.json', '.git' },
-    filetypes = { 'ts', 'typescript', 'html' },
+    filetypes = { 'typescript', 'html' },
 }
