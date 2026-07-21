@@ -18,10 +18,9 @@ vim.keymap.set('v', '>', '>gv', { desc = 'same as above but for >' })
 vim.keymap.set({ 'n', 'v' }, '<C-j>', '10j', { desc = 'Down 10 times' })
 vim.keymap.set({ 'n', 'v' }, '<C-k>', '10k', { desc = 'Up 10 times' })
 vim.keymap.set('n', '<C-z>', '<nop>', { desc = 'Prevent Ctrl+z from suspending Neovim' })
-vim.keymap.set('i', '<C-l>', '<Right>', { desc = 'Move one character forward in insert mode without arrows' })
-vim.keymap.set({ 'n', 'v' }, '<C-r>', '<C-l>', { desc = 'Ctrl+r "refreshes"' })
+vim.keymap.set({ 'n', 'v' }, '<C-r>', '<Cmd>lsp restart<CR>', { desc = 'Ctrl+r refreshes LSP' })
 vim.keymap.set({ 'i', 'n', 'v' }, '<C-b>', '<nop>', { desc = "If I can't have Ctrl+f I can't have Ctrl+b" })
-vim.keymap.set({ 'i', 'n', 'v' }, '<C-a>', '<Esc>gg^vG$', { desc = 'Ctrl+a selects all' })
+vim.keymap.set({ 'i', 'n', 'v' }, '<Leader>a', '<Esc>gg^vG$', { desc = 'Select all' })
 
 -- keymaps for moving lines up and down
 vim.keymap.set('n', '<A-j>', '<Esc>:m .+1<CR>==', {})
