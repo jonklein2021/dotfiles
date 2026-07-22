@@ -14,6 +14,7 @@ return {
                 lua = { 'stylua' },
                 python = { 'black' },
                 sql = { 'sqlfmt' },
+                ocaml = { 'ocamlformat' },
 
                 -- use prettier for JS/TS
                 javascript = { 'prettierd', 'prettier', stop_after_first = true },
