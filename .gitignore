@@ -1,22 +1,19 @@
 # WSL
-cutechess/
-pulse/
-gcloud/
 .wrangler/
+cutechess/
+gcloud/
+pulse/
 QtProject.conf
 
 # Mac
-NuGet/
-cagent/
+**/.claude/settings.local.json
 .mono/
 .gitconfig-personal
 .gitconfig-work
 .zshrc.osx.work
 avante.nvim/
-spotatui/client.yml
-spotatui/spotatui_panic.log
-spotatui/*.json
-spotatui/streaming_cache/credentials.json
+cagent/
+NuGet/
 
 # Shared
 github-copilot/
