@@ -55,6 +55,7 @@ vim.lsp.enable({
     'bash-language-server',
     'clangd',
     'emmet-language-server',
+    'jdtls',
     'lua-language-server',
     'ocamllsp',
     'omnisharp',
