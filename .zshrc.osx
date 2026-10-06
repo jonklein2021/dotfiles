@@ -4,6 +4,7 @@ export PATH="${HOME}/.dotnet/tools:$PATH"
 export PATH="${HOME}/.opam/default/bin/ocamllsp:$PATH"
 export PATH="/opt/homebrew/opt/dotnet@6/bin:$PATH"
 export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
 
 # Other Env Variables
 export KITTY_CONFIG_DIRECTORY="$HOME/.config/kitty"
