@@ -47,16 +47,29 @@ vim.keymap.set('n', '<A-0>', '<Cmd>BufferLast<CR>', {})
 
 -- Bells & Whistles
 vim.keymap.set('n', '<Leader>m', '<Cmd>%s/\r//g<CR>', { desc = 'Deletes all Microsoft carriage returns' })
+
 vim.keymap.set({ 'n', 'v' }, '[d', function()
     vim.diagnostic.jump({ count = -1, float = true })
 end, { desc = 'Jump to previous diagnostic in this file' })
 vim.keymap.set({ 'n', 'v' }, ']d', function()
     vim.diagnostic.jump({ count = 1, float = true })
 end, { desc = 'Jump to next diagnostic in this file' })
-vim.keymap.set({ 'i', 'n', 'v' }, '<C-f>', '<Cmd>Telescope find_files<CR>', { desc = 'File Search' })
+
 vim.keymap.set({ 'n', 'v' }, 'gs', function()
-    require('telescope.builtin').git_status({ use_file_path = true })
+    require('telescope.builtin').git_status({ hidden = true, use_file_path = true })
 end, { desc = 'Git Status' })
-vim.keymap.set({ 'i', 'n', 'v' }, '<C-_>', '<Cmd>Telescope live_grep<CR>', { desc = 'Live Grep' })
+
+vim.keymap.set({ 'i', 'n', 'v' }, '<C-f>', function()
+    require('telescope.builtin').find_files({ hidden = true })
+end, { desc = 'File Search' })
+
+vim.keymap.set({ 'i', 'n', 'v' }, '<C-_>', function()
+    require('telescope.builtin').live_grep({
+        additional_args = function()
+            return { '--hidden' }
+        end,
+    })
+end, { desc = 'Live Grep' })
+
 vim.keymap.set({ 'n', 'v' }, '<Leader>p', require('peek').open, { desc = 'Markdown preview' })
 vim.keymap.set({ 'n', 'v' }, '<Leader>gb', ':GBrowse<CR>', { desc = 'Open in GitHub/GitLab' })
