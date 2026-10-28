@@ -14,7 +14,8 @@ QtProject.conf
 avante.nvim/
 cagent/
 NuGet/
-opencode
+opencode/
+vite-plus/
 
 # Shared
 github-copilot/
