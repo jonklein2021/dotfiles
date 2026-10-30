@@ -12,11 +12,13 @@ export MONO_GAC_PREFIX="/opt/homebrew"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
+# Miniconda
+eval "$(conda "shell.$(basename "${SHELL}")" hook)"
 
 # Pull in work-specific script
 if [ -f $HOME/.zshrc.osx.work ]; then
   . $HOME/.zshrc.osx.work
 fi
-
