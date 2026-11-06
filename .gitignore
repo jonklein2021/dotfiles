@@ -16,6 +16,7 @@ cagent/
 NuGet/
 opencode/
 vite-plus/
+configstore/
 
 # Shared
 github-copilot/
