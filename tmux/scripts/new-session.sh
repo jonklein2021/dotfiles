@@ -2,7 +2,25 @@
 # prompts for a session name and switches to it, creating it first if needed.
 # if the name has a preset (@preset_<name> tmux option), the session starts in that directory.
 
-read -r -p "Session name: " name
+# reads the session name one key at a time so esc can cancel the prompt (ctrl-c still works too)
+printf "Session name: "
+name=""
+while IFS= read -rsn1 char; do
+	case "$char" in
+		$'\e') exit 0 ;;
+		"") break ;;
+		$'\x7f' | $'\b')
+			if [ -n "$name" ]; then
+				name="${name%?}"
+				printf '\b \b'
+			fi
+			;;
+		*)
+			name+="$char"
+			printf '%s' "$char"
+			;;
+	esac
+done
 [ -z "$name" ] && exit 0
 
 if ! tmux has-session -t "=$name" 2>/dev/null; then
