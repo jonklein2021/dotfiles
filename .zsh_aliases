@@ -7,7 +7,7 @@ alias "....."="cd ../../../.."
 alias g='git'
 alias ga='git add'
 alias gb='git branch'
-alias gbdm='git branch --merged | grep -v '^\*' | xargs -n 1 git branch -d' # deletes merged branches
+alias gbdm='git branch --merged | grep -v '^\*' | xargs -n 1 git branch -d'       # deletes merged branches
 alias gctall='git diff --name-only --diff-filter=U | xargs git checkout --theirs' # chooses "theirs" for all merge conflicts
 alias gca='git commit --amend --date=now'
 alias gcane='git commit --amend --no-edit --date=now'
@@ -36,6 +36,8 @@ alias gs='git status'
 alias gsh='git show'
 alias gst='git stash'
 alias gsw='git switch'
+alias gwt='git worktree'
+alias gwtu='git worktree unlock'
 
 # Tmux
 alias tm='tmux'
@@ -79,4 +81,3 @@ alias v="vim"
 alias y="yazi"
 alias oc="opencode"
 alias cl="claude"
-
